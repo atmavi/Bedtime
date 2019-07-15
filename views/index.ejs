@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="ui container ">
+<div class="ui items">
+<%stories.forEach(function(story){%>
+	<div class="gray item">
+		<div class="ui small image">
+			<img src="<%= story.image%>">
+		</div>
+		<div class="content">
+			<div class="header"><%=story.title%></div>
+			<div class="description"><%=story.plot%></div>
+			<a class="ui secondary button" href="/index/<%=story._id%>">See More...</a>
+		</div>
+	</div>
+	<div class="ui divider"></div>
+<%});%>
+</div>
+
+<% include partials/footer %>

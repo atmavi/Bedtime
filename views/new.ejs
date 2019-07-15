@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<div class="ui container segment">
+
+	<form class="ui form" method="POST" action="/index" required>
+		<div class="field">
+			<label>Title</label>
+			<input type="text" name="kwento[title]" placeholder="Title" required>
+		</div>
+		<div class="field">
+			<label>Author</label>
+			<input type="text" name="kwento[author]" placeholder="Author" required>
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="kwento[image]" placeholder="Image URL" required>
+		</div>
+		<div class="field">
+			<label>Plot</label>
+			<textarea name="kwento[plot]" required></textarea>
+		</div>
+		<button class="ui large orange button">Post</button>
+	</form>
+	
+</div>
+
+<% include partials/footer %>

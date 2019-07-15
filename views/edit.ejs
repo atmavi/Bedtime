@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="ui container segment">
+	<form class="ui form" action="/index/<%=story._id%>?_method=PUT" method="POST" >
+		<div class="field">
+			<label>Title</label>
+			<input type="text" name="kwento[title]" placeholder="Title" value="<%=story.title%>">
+		</div>
+		<div class="field">
+			<label>Author</label>
+			<input type="text" name="kwento[author]" placeholder="Author" value="<%=story.author%>">
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="kwento[image]" placeholder="Image URL" value="<%=story.image%>">
+		</div>
+		<div class="field">
+			<label>Plot</label>
+			<textarea name="kwento[plot]" ><%=story.plot%></textarea>
+		</div>
+		<button class="ui large orange button">Update</button>
+	</form>
+	
+</div>
+
+<% include partials/footer %>
